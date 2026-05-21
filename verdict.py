@@ -42,6 +42,12 @@ if __name__ == "__main__":
 
     enc_text = tokenizer.encode(raw_text)
     print(len(enc_text))
+    enc_sample = enc_text[50:]
+    context_size = 4
+    x = enc_sample[:context_size]
+    y = enc_sample[1:context_size+1]
+    print(f"x: {x}")
+    print(f"y:      {y}")
     # print("Text:", text)
     # print("Token IDs:", token_ids)
     # print("Token count:", tokenizer.count_tokens(text))
